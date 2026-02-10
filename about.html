@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Bloom Valley Nursery and contact us for inquiries and custom orders.">
+    <title>About Us | Bloom Valley Nursery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&family=Lato:wght@300;400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Bloom Valley Nursery Logo" class="logo" onerror="this.style.display='none'">
+            <h1 class="brand-name">Bloom Valley Nursery</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="community.html">Community</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h2>About Bloom Valley Nursery</h2>
+        <div class="about-content">
+            <p>Welcome to <strong>Bloom Valley Nursery</strong>, your local family-owned plant nursery! We have been
+                serving our community for generations, providing high-quality plants, trees, and gardening supplies to
+                gardening enthusiasts and homeowners alike.</p>
+            <p>Our mission is to connect you with nature and help you create beautiful gardens that thrive. We believe
+                in sustainable practices and nurturing both our plants and our community.</p>
+            <p>Whether you're a seasoned gardener or just starting out, our friendly and knowledgeable staff is here to
+                help you every step of the way. From selecting the perfect plant to providing expert care tips, we're
+                dedicated to your gardening success.</p>
+        </div>
+    </section>
+
+    <!-- Business Hours Section -->
+    <section class="hours-section">
+        <h2>Business Hours</h2>
+        <table class="hours-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>9:00 AM - 6:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>9:00 AM - 6:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>9:00 AM - 6:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>9:00 AM - 6:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>9:00 AM - 6:00 PM</td>
+                </tr>
+                <tr class="weekend">
+                    <td>Saturday</td>
+                    <td>10:00 AM - 5:00 PM</td>
+                </tr>
+                <tr class="weekend">
+                    <td>Sunday</td>
+                    <td>10:00 AM - 5:00 PM</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Have a question or want to place a custom order? Fill out the form below and we'll get back to you soon!</p>
+
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="customer-name">Name *</label>
+                <input type="text" id="customer-name" name="name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="customer-email">Email *</label>
+                <input type="email" id="customer-email" name="email" required placeholder="Enter your email address">
+            </div>
+
+            <div class="form-group">
+                <label for="customer-address">Address</label>
+                <input type="text" id="customer-address" name="address" placeholder="Enter your address">
+            </div>
+
+            <div class="form-group">
+                <label for="customer-phone">Phone Number</label>
+                <input type="tel" id="customer-phone" name="phone" placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-group">
+                <label for="customer-message">Message / Custom Order Details *</label>
+                <textarea id="customer-message" name="message" rows="5" required
+                    placeholder="Tell us how we can help you..."></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="custom-order" name="customOrder">
+                <label for="custom-order">This is a custom order request</label>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-submit" id="submit-btn">Submit</button>
+                <button type="reset" class="btn btn-clear-form" id="clear-form-btn">Clear Form</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section">
+        <h2>Visit Us</h2>
+        <div class="location-info">
+            <p><strong>📍 Address:</strong> 123 Garden Lane, Bloom Valley, CA 90210</p>
+            <p><strong>📞 Phone:</strong> (555) 123-4567</p>
+            <p><strong>📧 Email:</strong> info@bloomvalleynursery.com</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="footer-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="community.html">Community</a></li>
+            </ul>
+        </div>
+        <div class="subscribe-section">
+            <h3>Subscribe to Our Newsletter</h3>
+            <form id="subscribe-form" class="subscribe-form">
+                <input type="email" id="subscribe-email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-subscribe" id="subscribe-btn">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-info">
+            <p>&copy; 2024 Bloom Valley Nursery. All rights reserved.</p>
+            <p>123 Garden Lane, Bloom Valley, CA 90210</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

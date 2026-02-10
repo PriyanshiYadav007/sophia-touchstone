@@ -1,0 +1,40 @@
+@startuml
+salt
+{
+  { (X) | Bloom Valley Nursery | [ Home | Gallery | About Us | Community ] }
+  --
+  {
+    .
+    == Welcome to Bloom Valley Nursery
+    "Your local family-owned plant nursery, cultivating nature's beauty since generations."
+    [ Explore Our Plants ]
+    .
+  }
+  --
+  {
+    "Featured Products"
+    [ (Image: Maple Tree) | (Image: Aloe Plant) ]
+    "Maple Tree" | "Aloe Vera Plant"
+  }
+  --
+  {
+    "Why Choose Us?"
+    [ Expert Advice | Quality Plants ]
+    [ Local & Family | Custom Orders ]
+  }
+  --
+  {
+    "Shop by Category"
+    * Trees
+    * Indoor Plants
+    * Succulents
+  }
+  --
+  {
+    "Subscribe to our Newsletter"
+    "Email address" | [ Subscribe ]
+    .
+    "(c) 2024 Bloom Valley Nursery"
+  }
+}
+@enduml
