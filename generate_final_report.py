@@ -1,6 +1,6 @@
 """
-Final Compilation Script for Bloom Valley Nursery Touchstone Report.
-Ensures all generated wireframes and screenshots are correctly embedded.
+Final BULLETPROOF Task Compilation Script for Bloom Valley Nursery.
+Adds detailed analysis for accessibility, RWD, and storage as per rubric.
 """
 import os
 from docx import Document
@@ -32,59 +32,89 @@ def main():
     add_heading(doc, 'Final Touchstone Report', 0)
     p = doc.add_paragraph('\nBloom Valley Nursery Website Project\n\n')
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    p = doc.add_paragraph('Developed for: Web Development Fundamentals Course\nDate: February 10, 2026\n')
+    p = doc.add_paragraph('Developed by: Priyanshi Yadav\nDate: February 11, 2026\n')
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     doc.add_page_break()
 
-    # --- Section 1: Introduction ---
+    # --- Section 1: Introduction & Design ---
     add_heading(doc, '1. Introduction and Design Phase', 1)
-    doc.add_paragraph('Bloom Valley Nursery is a family-owned business focused on plants and community gardening. The website was designed with a "Leafy Green" palette to evoke growth and nature.')
+    doc.add_paragraph('Bloom Valley Nursery is a family-owned business specializing in plants, trees, and gardening supplies. The website aims to improve customer engagement and facilitate custom orders.')
     
-    add_heading(doc, 'Desktop Wireframe (Figma Style)', 2)
-    add_image(doc, 'wireframe_desktop.png', 'Fig 1: Desktop Wireframe UI/UX Design')
+    doc.add_paragraph('Design Rationale:')
+    doc.add_paragraph('- Color Palette: Leafy Green (#4A7C59) and harvest gold accents were used to represent growth and nature.')
+    doc.add_paragraph('- Typography: Playfair Display (Serif) for headers adds a touch of elegance, while Open Sans (Sans-Serif) ensures readability in body content.')
+    doc.add_paragraph('- Logo: A tree-based emblem that reinforces the brand identity.')
+
+    add_heading(doc, 'Desktop Wireframe', 2)
+    add_image(doc, 'wireframe_desktop.png', 'Fig 1: Desktop Wireframe UI Layout')
     
-    add_heading(doc, 'Mobile Wireframe (Figma Style)', 2)
+    add_heading(doc, 'Mobile Wireframe', 2)
     add_image(doc, 'wireframe_mobile.png', 'Fig 2: Mobile Responsive Wireframe Layout')
     doc.add_page_break()
 
     # --- Section 2: Website Structure ---
-    add_heading(doc, '2. Website Structure and Content', 1)
-    doc.add_paragraph('The website consists of four semantic HTML5 pages. Each page features a consistent navigation bar and responsive footer.')
+    add_heading(doc, '2. Website Structure and HTML Components', 1)
+    doc.add_paragraph('The website is built with a semantic HTML5 structure for better accessibility and SEO.')
     
-    add_heading(doc, 'Homepage Layout', 2)
-    add_image(doc, '01_homepage_full.png', 'Fig 3: Homepage with Hero Section and Featured Products')
+    doc.add_paragraph('Component Descriptions:')
+    doc.add_paragraph('- Navigation Bar: Persistent header allows quick access to Home, Gallery, About, and Community pages.')
+    doc.add_paragraph('- Homepage: Features a Hero section with a CTA, Featured Products, and a Perks section.')
+    doc.add_paragraph('- Gallery: Organized in a 3x3 grid using CSS Flexbox/Grid for a professional product showcase.')
+    doc.add_paragraph('- About Us: Contains a business hours table and a comprehensive contact form for custom orders.')
+    doc.add_paragraph('- Community Corner: A custom page highlighting customer testimonials and local events.')
+
+    add_heading(doc, 'Homepage Rendering', 2)
+    add_image(doc, '01_homepage_full.png', 'Fig 3: Live Homepage Screenshot')
     
-    add_heading(doc, 'Gallery Page (3x3 Grid)', 2)
-    add_image(doc, '03_gallery_grid.png', 'Fig 4: Gallery displaying automated product grid and "Add to Cart" interactions')
+    add_heading(doc, 'Gallery Rendering', 2)
+    add_image(doc, '03_gallery_grid.png', 'Fig 4: Gallery Page Screenshot')
     doc.add_page_break()
 
-    # --- Section 3: Interaction & Functionality ---
-    add_heading(doc, '3. Interaction and JavaScript Features', 1)
-    doc.add_paragraph('Dynamic features include a functional shopping cart and contact form system. Interactive alerts provide feedback for every user action.')
+    # --- Section 3: Styling & Accessibility ---
+    add_heading(doc, '3. Website Design, Styling, and Accessibility', 1)
     
-    add_heading(doc, 'About Us & Contact Form', 2)
-    add_image(doc, '09_about_page.png', 'Fig 5: About Us page with business hours table and contact intake form')
+    add_heading(doc, 'Accessibility Analysis', 2)
+    doc.add_paragraph('The website follows WCAG guidelines for accessibility:')
+    doc.add_paragraph('- Semantic Elements: Used <header>, <nav>, <main>, <section>, and <footer> tags.')
+    doc.add_paragraph('- Alt Text: All product and logo images include descriptive alternative text for screen readers.')
+    doc.add_paragraph('- Color Contrast: High contrast ratios between text and background ensure readability.')
+    doc.add_paragraph('- Focus States: Interactive elements have clearly defined hover and focus states.')
+
+    add_heading(doc, 'Responsive Web Design (RWD) Rationale', 2)
+    doc.add_paragraph('The website uses CSS Media Queries to adapt the layout between desktop and mobile devices. Flexbox wrap and Grid auto-fit properties enable the product grid to stack vertically on smaller screens, ensuring a seamless experience across all platforms.')
     
-    add_heading(doc, 'Community Corner', 2)
-    add_image(doc, '12_community_page.png', 'Fig 6: Custom Page showcasing testimonials and community events')
+    add_heading(doc, 'About Us Page & Contact Form', 2)
+    add_image(doc, '09_about_page.png', 'Fig 5: About Us page with semantic elements and CSS layout')
     doc.add_page_break()
 
-    # --- Section 4: Web Storage Implementation ---
-    add_heading(doc, '4. Web Storage Evidence', 1)
-    doc.add_paragraph('The shopping cart utilizes sessionStorage to track items, while localStorage persists contact form metadata.')
+    # --- Section 4: Functionality & Storage ---
+    add_heading(doc, '4. Website Functionality and Web Storage', 1)
     
-    add_heading(doc, 'Shopping Cart View', 2)
-    add_image(doc, '05_cart_modal_items.png', 'Fig 7: View Cart modal retrieving items from sessionStorage')
-    
-    add_heading(doc, 'Clear Cart Functionality', 2)
-    add_image(doc, '07_cart_modal_empty.png', 'Fig 8: Modal state after clearing sessionStorage storage')
+    add_heading(doc, 'JavaScript Interaction', 2)
+    doc.add_paragraph('JavaScript is utilized for form validation, dynamic alerts, and state management.')
+    doc.add_paragraph('- Subscribe Alert: Notifies users upon newsletter signup.')
+    doc.add_paragraph('- Add to Cart: Triggers a confirmation alert and updates the cart state.')
+    doc.add_paragraph('- Form Submission: Validates user input and provides a "Message Sent" alert.')
 
-    # --- Conclusion ---
-    add_heading(doc, '5. Conclusion', 1)
-    doc.add_paragraph('The project successfully meets all Touchstone criteria. The final product is a professional, accessible, and interactive web presence for Bloom Valley Nursery.')
+    add_heading(doc, 'Web Storage Implementation', 2)
+    doc.add_paragraph('Session Storage (sessionStorage): Used to manage the shopping cart. Data persists during the session allowing users to browse without losing items.')
+    doc.add_paragraph('Local Storage (localStorage): Used on the About Us page to save contact form metadata, ensuring customer inquiry history is tracked.')
+
+    add_heading(doc, 'Shopping Cart Evidence', 2)
+    add_image(doc, '05_cart_modal_items.png', 'Fig 6: Shopping Cart modal displaying items retrieved from sessionStorage')
+    
+    add_heading(doc, 'Community Corner rendering', 2)
+    add_image(doc, '12_community_page.png', 'Fig 7: Community corner showing local testimonials')
+
+    # --- Final Link ---
+    doc.add_page_break()
+    add_heading(doc, '5. Project Repository Link', 1)
+    doc.add_paragraph('The complete project code and documentation is available at the following GitHub repository:')
+    p = doc.add_paragraph('https://github.com/PriyanshiYadav007/sophia-touchstone.git')
+    p.style.font.color.rgb = None # Set to default or blue if needed
 
     doc.save(OUTPUT_PATH)
-    print(f"Final Report compiled successfully at: {OUTPUT_PATH}")
+    print(f"Enhanced Final Report compiled at: {OUTPUT_PATH}")
 
 if __name__ == "__main__":
     main()
